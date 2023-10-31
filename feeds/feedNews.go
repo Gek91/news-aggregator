@@ -1,4 +1,4 @@
-package main
+package feeds
 
 import (
 	"fmt"
@@ -9,10 +9,10 @@ type FeedNews struct {
 	feedId          string
 	Title           string
 	Link            string
-	publicationTime time.Time
+	PublicationTime time.Time
 	Categories      []string
 }
 
 func (f *FeedNews) String() string {
-	return fmt.Sprintf("%s\n%s\n%s\n%s\n%v\n", f.feedId, f.Title, f.Link, f.publicationTime.String(), f.Categories)
+	return fmt.Sprintf("%s\n%s\n%s\n%s\n%v\n", f.feedId, f.Title, f.Link, f.PublicationTime.String(), f.Categories)
 }
